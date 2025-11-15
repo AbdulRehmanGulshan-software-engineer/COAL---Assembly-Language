@@ -12,7 +12,7 @@ main PROC
          mov  ds,ax
 
          mov  si,offset arr1
-         mov  cx,7
+         mov  cx,7              ;counter register
     L1:  
          mov  dx,[si]
          mov  ah,2

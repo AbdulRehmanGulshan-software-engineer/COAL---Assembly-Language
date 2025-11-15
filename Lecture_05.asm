@@ -22,7 +22,11 @@ Main proc
 Mov dl,'A'
 Mov ah,2
 INT 21h
+
+
 Mov ah,4ch      ; bhai nikal aa bahir register se 
 INT 21h         ; cpu ko interrupt kro ke pehle ye kar
 Main endp
-End Main
+
+
+End Main    ;program end ho rha idhr

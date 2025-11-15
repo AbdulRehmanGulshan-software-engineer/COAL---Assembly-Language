@@ -14,7 +14,7 @@ main PROC
     mov ah,1
     int 21h
     add bl,al
-    sub bl,48
+    sub bl,48   ;1 = 49,1 = 49 ---> 2 = 98 ---> 98-48 = 50 = 2
 
     mov dl,bl
     mov ah,2

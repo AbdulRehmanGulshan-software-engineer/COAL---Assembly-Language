@@ -7,20 +7,28 @@ dosseg
     arr1 db '1','2','3','4'
     arr2 db 'a','b','c'
     arr3 db 'abc'            ;same as arr2
-    arr4 db 'a'.'a','a'
+    arr4 db 'a','a','a'
     arr5 db ?,?,?,?,?,?,?    ;uninitialized
     arr6 db 3 dup('a')        ;same as arr4
     arr7 db 7 dup('?')        ;same as arr5
 .code
     ;description
 main PROC
-         mov ax,@data
+         mov ax,@data       ;ratta
          mov ds,ax
 
     ; how we will access array
     ; we will access using si i.e. source index register
-         mov si,offset arr1
+         mov si,offset arr1     ;remember
          mov dx,[si]           ;bracket form to access value at address
+         mov ah,2
+         int 21h
+
+         ;add new line
+         mov dl,0DH
+         mov ah,2
+         int 21h
+         mov dl,0AH
          mov ah,2
          int 21h
 

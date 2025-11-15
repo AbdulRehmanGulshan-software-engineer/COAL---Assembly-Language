@@ -9,7 +9,7 @@ dosseg
 .code
     ;description
 main PROC
-         mov ax,@data
+         mov ax,@data         ;ratta
          mov ds,ax
 
     ;input number

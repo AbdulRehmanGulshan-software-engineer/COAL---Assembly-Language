@@ -18,6 +18,9 @@ mov dl,'i'
 mov ah,2
 int 21h
 
+mov ah,4ch  ;bahir aaja ah se
+int 21h ;interept kr bhaii
+
 Main ENDP
 end Main
 

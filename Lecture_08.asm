@@ -5,18 +5,17 @@ dosseg
 .stack 100h
 .data
 .code
-;description
-main PROC
-    mov ah,1
-    int 21h
-    ;now input will be in al register
+main proc
 
-    mov dl,al
-    mov ah,2
-    int 21h   
+mov ah,1
+int 21h
+mov dl,al
 
-    mov ah,4ch
-    int 21h
-main ENDP
+mov ah,2
+int 21h
+
+mov ah,4ch
+int 21h
+
+main endp
 end main
-

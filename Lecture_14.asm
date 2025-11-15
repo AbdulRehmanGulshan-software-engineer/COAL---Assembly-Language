@@ -20,9 +20,16 @@ main PROC
          mov dx,10
          mov ah,2
          int 21h
+    ; code for carriage return
+         mov dx,13
+         mov ah,2
+         int 21h
 
          mov dx,offset msg2    ; similar to (lea dx,msg2)
          mov ah,9
+         int 21h
+
+         mov ah,4ch
          int 21h
 
 main ENDP

@@ -9,12 +9,14 @@ main PROC
     ; input red balls
     mov ah,1
     int 21h
-    mov ax,al ;bit match issue
+    mov ah,0
+    ;mov ax,al ;bit match issue     ;ab ye likhne ki zrurat nhi
 
     ; input blue balls
     mov ah,1
     int 21h
-    mov bx,al  ;bit match issue
+    mov ah,0    ;isko 16 bit bna diya ax
+    mov bx,ax  ;bit match issue solved
 
     ;compare both
     cmp bx,ax
